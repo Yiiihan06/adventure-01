@@ -1,0 +1,225 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Jacquard 12', system-ui, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: white;
+}
+
+/* Pages Container */
+.pages-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.page {
+    width: 1440px;
+    height: 1024px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.page.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+
+/* Page 1 Styles */
+#page1 {
+    background: white;
+}
+
+.house-fly-lg1 {
+    position: absolute;
+    left: -134px;
+    top: 0;
+    width: 1820px;
+    height: 1024px;
+}
+
+.house-fly-lg1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    pointer-events: none;
+}
+
+/* Page 2 Styles */
+#page2 {
+    background: #575039;
+}
+
+/* Page 3 Styles */
+#page3 {
+    background: white;
+}
+
+.house-fly-sm1 {
+    position: absolute;
+    left: 769px;
+    top: 665px;
+    width: 502px;
+    height: 283px;
+}
+
+.house-fly-sm1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    pointer-events: none;
+}
+
+.drawing1 {
+    position: absolute;
+    left: 102.43px;
+    top: 77px;
+    width: 432.371px;
+    height: 233.984px;
+}
+
+.drawing1 img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Text Styles (common for all pages) */
+.page-text {
+    position: absolute;
+    left: 419px;
+    top: 412px;
+    width: 601px;
+    height: 200px;
+    font-family: 'Jacquard 12', sans-serif;
+    font-size: 200px;
+    line-height: normal;
+    color: #060405;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    display: block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.page-text:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+.page-text p {
+    margin: 0;
+    line-height: normal;
+}
+
+/* Navigation Controls */
+.navigation {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    z-index: 1000;
+    display: flex;
+    gap: 10px;
+}
+
+.nav-btn {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #060405;
+    padding: 10px 20px;
+    font-family: 'Jacquard 12', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.nav-btn:hover {
+    background: #060405;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.nav-btn:active {
+    transform: translateY(0);
+}
+
+/* Page Indicator */
+.page-indicator {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 1000;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(6, 4, 5, 0.3);
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: #060405;
+    transform: scale(1.3);
+}
+
+/* Keyboard Navigation Helper */
+.keyboard-hint {
+    position: fixed;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: system-ui, sans-serif;
+    font-size: 12px;
+    color: rgba(6, 4, 5, 0.5);
+    z-index: 1000;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1440px) {
+    .page {
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+}
+
+@media (max-width: 1200px) {
+    .page {
+        transform: translate(-50%, -50%) scale(0.6);
+    }
+}
+
+@media (max-width: 900px) {
+    .page {
+        transform: translate(-50%, -50%) scale(0.4);
+    }
+    
+    .navigation {
+        top: 10px;
+        right: 10px;
+    }
+    
+    .nav-btn {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}

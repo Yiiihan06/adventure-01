@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orange - Figma Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Controls -->
+    <nav class="navigation">
+        <button class="nav-btn" data-page="1">Page 1</button>
+        <button class="nav-btn" data-page="2">Page 2</button>
+        <button class="nav-btn" data-page="3">Page 3</button>
+    </nav>
+
+    <!-- Page Indicator -->
+    <div class="page-indicator">
+        <span class="indicator active"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+    </div>
+
+    <!-- Container for all pages -->
+    <div class="pages-container">
+        
+        <!-- Page 1 -->
+        <div class="page active" id="page1" data-name="pg1">
+            <div class="house-fly-lg1">
+                <img src="https://www.figma.com/api/mcp/asset/a3b2e6e0-06bc-478d-9f13-dd74eed071ed" alt="House fly large" />
+            </div>
+            <a class="page-text" href="#" data-navigate="2">
+                <p>text test</p>
+            </a>
+        </div>
+
+        <!-- Page 2 -->
+        <div class="page" id="page2" data-name="pg2">
+            <a class="page-text" href="#" data-navigate="3">
+                <p>text test</p>
+            </a>
+        </div>
+
+        <!-- Page 3 -->
+        <div class="page" id="page3" data-name="pg3">
+            <div class="house-fly-sm1">
+                <img src="https://www.figma.com/api/mcp/asset/85021cdd-92e2-4cc9-8d46-1bfca05751a5" alt="House fly small" />
+            </div>
+            <a class="page-text" href="#" data-navigate="1">
+                <p>text test</p>
+            </a>
+            <div class="drawing1">
+                <img src="https://www.figma.com/api/mcp/asset/da9208ef-722c-428f-9c71-5ca67bccb9a7" alt="Drawing" />
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Keyboard Navigation Helper -->
+    <div class="keyboard-hint">
+        Use ← → arrow keys or click text to navigate
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
